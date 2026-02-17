@@ -163,6 +163,21 @@
             margin: 4rem 0;
             animation: fadeIn 1s ease-in;
         }
+        .tags {
+            margin-top: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+        
+        .tags span {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 999px;
+            background-color: #f1f3f5;
+            color: #333;
+            font-weight: 500;
+        }
 
         h2 {
             font-size: 2rem;
@@ -376,49 +391,15 @@
         <section id="about">
             <h2>About Me</h2>
             <div class="card">
-                <p>여기에 자세한 자기소개를 작성하세요. 당신의 배경, 경험, 열정, 그리고 현재 하고 있는 일에 대해 설명할 수 있습니다.</p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="card">
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>미완</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="90"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>미완</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>미완</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="80"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">
-                        <span>미완</span>
-                        <span>50%</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-progress="75"></div>
-                    </div>
-                </div>
+                <p> 2008년 출생 - 보안 분야에 관심을 두고 정진 중인 학생 </p>
+                
+                <p><strong>교육 사항</strong></p>
+                <p>제주제일고등학교 (2024~)</p>
+                <p>WHS (차세대 보안 리더 화이트 햇스쿨) 3기 (2025)</p>
+                
+                <p><strong>대회</strong></p>
+                <p> 제 11회 대한민국 SW 융합 해커톤 본선(팀장) (2024)</p>
+                <p> 제 12회 대한민국 SW 융합 해커톤 본선(팀장) (2025)</p>
             </div>
         </section>
 
@@ -426,17 +407,94 @@
             <h2>Projects</h2>
             <div class="card-grid">
                 <div class="card">
-                    <h3>프로젝트 1</h3>
-                    <p>프로젝트 설명을 여기에 작성하세요. 사용한 기술, 목적, 성과 등을 포함할 수 있습니다.</p>
+                    <h3>개인 연구 1.0 (2024)</h3>
+                    <p>Watchdog를 활용한 단순 랜섬웨어 탐지 구현</p>
+                    <div class="tags">
+                        <span>#랜섬웨어</span>
+                        <span>#Python</span>
+                        <span>#Watchdog</span>
+                        <span>#탐지</span>
+                    </div>
                 </div>
+                
                 <div class="card">
-                    <h3>프로젝트 2</h3>
-                    <p>프로젝트 설명을 여기에 작성하세요. 사용한 기술, 목적, 성과 등을 포함할 수 있습니다.</p>
+                    <h3>공동 연구 2.0 (feat . 이현수, 이진혁, 2025)</h3>
+                    <p>자동화 반사형 XSS 페이로드 삽입을 통한 취약점 보고서 작성 도구 개발 및 생성형 AI와의 비교 실험</p>
+                    <div class="tags">
+                        <span>#Cross-Site Scripting</span>
+                        <span>#Python</span>
+                        <span>#JavaScript</span>
+                        <span>#LLM</span>
+                        <span>#웹해킹</span>
+                    </div>
                 </div>
+                
                 <div class="card">
-                    <h3>프로젝트 3</h3>
-                    <p>프로젝트 설명을 여기에 작성하세요. 사용한 기술, 목적, 성과 등을 포함할 수 있습니다.</p>
+                    <h3>암호화 알고리즘 분류 모델 개발 및 분석 (2025)</h3>
+                    <p>AES-CBC외 5개 알고리즘에 대한 특징 공학을 적용한 Random Forest 분류 모델 제작 및 AES-ECB의 단점 확인</p>
+                    <div class="tags">
+                        <span>#머신러닝</span>
+                        <span>#암호학</span>
+                        <span>#Python</span>
+                        <span>#Random Forest</span>
+                    </div>
                 </div>
+                    
+                <div class="card">
+                    <h3>SNAP STOCK (feat. 갈선우, 이현수, 이진혁, 이건희, 2025)</h3>
+                    <p>로고 인식을 통한 ESG 투자 플랫폼 [제 12회 SW 융합 해커톤]</p>
+                    <div class="tags">
+                        <span>#딥러닝</span>
+                        <span>#CV</span>
+                        <span>#웹 어플리케이션</span>
+                        <span>#Mobilenet V2</span>
+                    </div>
+                </div>
+                    
+                <div class="card">
+                    <h3>제 3회 제주 정보축제 전시 (2025)</h3>
+                    <p>참여형 전시 작품 (나무를 그리면 화면 속 숲에 심어짐)</p>
+                    <div class="tags">
+                        <span>#Java Script</span>
+                        <span>#CV</span>
+                        <span>#웹 어플리케이션</span>
+                        <span>#Fire Base</span>
+                    </div>
+                </div>
+               
+                <div class="card">
+                    <h3>개인 연구 2.0 (2025)</h3>
+                    <p>Sysmon과 Python을 연계하여 Smartfense사의 모의 랜섬웨어 및 정상 상태 분석 진행</p>
+                    <div class="tags">
+                        <span>#랜섬웨어</span>
+                        <span>#Python</span>
+                        <span>#Sysmon</span>
+                        <span>#분석</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>교내 외출 기록 전자 장부 (feat 고건,이은수, 2025)</h3>
+                    <p>제주제일고등학교 자율 학습 외출 기록 전자 장부 제작</p>
+                    <div class="tags">
+                        <span>#웹앱</span>
+                        <span>#Python</span>
+                        <span>#Flask</span>
+                        <span>#봉사</span>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3>개인 연구 3.0 (2026~)</h3>
+                    <p>기존 개인 연구 및 Any.run 보고서를 기반으로 한 특성 기반 랜섬웨어 탐지 도구 개발</p>
+                    <div class="tags">
+                        <span>#Anyrun</span>
+                        <span>#랜섬웨어</span>
+                        <span>#Python</span>
+                        <span>#행동기반탐지</span>
+                    </div>
+                </div>
+                
             </div>
         </section>
 
@@ -452,7 +510,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 Copyrighy by H4N.</p>
     </footer>
 
     <script>
