@@ -16,10 +16,10 @@
             --bg-secondary: #7e7e7e;
             --bg-card: #1c1c1c;
             --text-primary: #ffffff;
-            --text-secondary: #a0a8c5;
+            --text-secondary: #c9e1f1;
             --accent: #ffffff;
-            --accent-hover: #3bff41;
-            --border: #2cdb0e;
+            --accent-hover: #3b8dff;
+            --border: #0e9adb;
         }
 
         body {
@@ -164,7 +164,7 @@
             animation: fadeIn 1s ease-in;
         }
         .tags {
-            margin-top: 8px;
+            margin-top: auto;
             display: flex;
             flex-wrap: wrap;
             gap: 6px;
@@ -174,8 +174,8 @@
             font-size: 0.75rem;
             padding: 4px 8px;
             border-radius: 999px;
-            background-color: #f1f3f5;
-            color: #333;
+            background-color: #343434;
+            color: #ffffff;
             font-weight: 500;
         }
 
@@ -200,12 +200,15 @@
         /* 카드 스타일 */
         .card-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 4fr;
             gap: 2rem;
             margin-top: 2rem;
         }
 
         .card {
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
             background: var(--bg-card);
             padding: 2rem;
             border-radius: 12px;
@@ -215,7 +218,7 @@
 
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(91, 124, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(1, 30, 148, 0.2);
         }
 
         .card h3 {
@@ -285,7 +288,7 @@
         }
 
         .btn-outline:hover {
-            background: var(--accent);
+            background: #1c1c1c;
             color: white;
         }
 
@@ -332,9 +335,12 @@
             .card-grid {
                 grid-template-columns: 1fr;
             }
+
+            .card {
+                min-height: auto; 
+            }
         }
 
-        /* 스크롤 바 커스텀 */
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -380,7 +386,7 @@
     <main class="container">
         <section class="hero">
             <img src="https://github.com/FLY-H4N33/FLY-H4N33.github.io/blob/main/profile.png?raw=true" alt="프로필 사진" class="profile-image">
-            <h1>H4N</h1>
+            <h1 href="https://fly-h4n33.github.io/">H4N</h1>
             <p>정보 보안 & AI 관련 프로젝트 및 연구를 선호합니다</p>
             <div class="contact-buttons">
                 <a href="https://discord.com/users/906400408849776660" class="btn">Discord</a>
@@ -392,11 +398,11 @@
             <h2>About Me</h2>
             <div class="card">
                 <p> 2008년 출생 - 보안 분야에 관심을 두고 정진 중인 학생 </p>
-                
+                <p>------</p>
                 <p><strong>교육 사항</strong></p>
                 <p>제주제일고등학교 (2024~)</p>
                 <p>WHS (차세대 보안 리더 화이트 햇스쿨) 3기 (2025)</p>
-                
+                <p>------</p>
                 <p><strong>대회</strong></p>
                 <p> 제 11회 대한민국 SW 융합 해커톤 본선(팀장) (2024)</p>
                 <p> 제 12회 대한민국 SW 융합 해커톤 본선(팀장) (2025)</p>
@@ -406,9 +412,11 @@
         <section id="projects">
             <h2>Projects</h2>
             <div class="card-grid">
+                <h1>2023</h1>
                 <div class="card">
-                    <h3>개인 연구 1.0 (2024)</h3>
-                    <p>Watchdog를 활용한 단순 랜섬웨어 탐지 구현</p>
+                    <h3>이사지역 추천 프로그램</h3>
+                    <p>Watchdog를 활용한 단순 랜섬웨어 탐지 도구 구현</p>
+                    <h3> </h3>
                     <div class="tags">
                         <span>#랜섬웨어</span>
                         <span>#Python</span>
@@ -416,10 +424,30 @@
                         <span>#탐지</span>
                     </div>
                 </div>
-                
+            </div>
+            <div class="card-grid">
+                <h1>2024</h1>
                 <div class="card">
-                    <h3>공동 연구 2.0 (feat . 이현수, 이진혁, 2025)</h3>
+                    <h3>개인 연구 1.0 / 2024</h3>
+                    <p>Watchdog를 활용한 단순 랜섬웨어 탐지 도구 구현</p>
+                    <h3> </h3>
+                    <div class="tags">
+                        <span>#랜섬웨어</span>
+                        <span>#Python</span>
+                        <span>#Watchdog</span>
+                        <span>#탐지</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-grid">
+                <h1>2025</h1>
+                <div class="card">
+                    <h3>공동 연구 2.0 (2025)</h3>
                     <p>자동화 반사형 XSS 페이로드 삽입을 통한 취약점 보고서 작성 도구 개발 및 생성형 AI와의 비교 실험</p>
+                    <p>------</p>
+                    <p><strong>(feat 이현수, 이진혁)</strong></p>
+                    <h3> </h3>
+
                     <div class="tags">
                         <span>#Cross-Site Scripting</span>
                         <span>#Python</span>
@@ -428,10 +456,11 @@
                         <span>#웹해킹</span>
                     </div>
                 </div>
-                
+                <h3> </h3>
                 <div class="card">
                     <h3>암호화 알고리즘 분류 모델 개발 및 분석 (2025)</h3>
                     <p>AES-CBC외 5개 알고리즘에 대한 특징 공학을 적용한 Random Forest 분류 모델 제작 및 AES-ECB의 단점 확인</p>
+                    <h3> </h3>
                     <div class="tags">
                         <span>#머신러닝</span>
                         <span>#암호학</span>
@@ -439,10 +468,13 @@
                         <span>#Random Forest</span>
                     </div>
                 </div>
-                    
+                <h3> </h3>
                 <div class="card">
-                    <h3>SNAP STOCK (feat. 갈선우, 이현수, 이진혁, 이건희, 2025)</h3>
+                    <h3>SNAP STOCK (2025)</h3>
                     <p>로고 인식을 통한 ESG 투자 플랫폼 [제 12회 SW 융합 해커톤]</p>
+                    <p>------</p>
+                    <p><strong>(feat. 갈선우, 이현수, 이진혁, 이건희)</strong></p>
+                    <h3> </h3>
                     <div class="tags">
                         <span>#딥러닝</span>
                         <span>#CV</span>
@@ -450,10 +482,11 @@
                         <span>#Mobilenet V2</span>
                     </div>
                 </div>
-                    
+                <h3> </h3>
                 <div class="card">
                     <h3>제 3회 제주 정보축제 전시 (2025)</h3>
                     <p>참여형 전시 작품 (나무를 그리면 화면 속 숲에 심어짐)</p>
+                    <h3> </h3>
                     <div class="tags">
                         <span>#Java Script</span>
                         <span>#CV</span>
@@ -461,10 +494,11 @@
                         <span>#Fire Base</span>
                     </div>
                 </div>
-               
+                <h3> </h3>
                 <div class="card">
                     <h3>개인 연구 2.0 (2025)</h3>
                     <p>Sysmon과 Python을 연계하여 Smartfense사의 모의 랜섬웨어 및 정상 상태 분석 진행</p>
+                    <h3> </h3>
                     <div class="tags">
                         <span>#랜섬웨어</span>
                         <span>#Python</span>
@@ -472,10 +506,14 @@
                         <span>#분석</span>
                     </div>
                 </div>
-
+                <h3> </h3>
                 <div class="card">
-                    <h3>교내 외출 기록 전자 장부 (feat 고건,이은수, 2025)</h3>
+                    <h3>교내 외출 기록 전자 장부 (2025)</h3>
                     <p>제주제일고등학교 자율 학습 외출 기록 전자 장부 제작</p>
+
+                    <p>------</p>
+                    <p><strong>(feat 고건,이은수)</strong></p>
+                    <h3> </h3>
                     <div class="tags">
                         <span>#웹앱</span>
                         <span>#Python</span>
@@ -483,10 +521,13 @@
                         <span>#봉사</span>
                     </div>
                 </div>
-                
+            </div>
+            <div class="card-grid">
+            <h1>2026</h1>
                 <div class="card">
                     <h3>개인 연구 3.0 (2026~)</h3>
                     <p>기존 개인 연구 및 Any.run 보고서를 기반으로 한 특성 기반 랜섬웨어 탐지 도구 개발</p>
+                    <h3> </h3>
                     <div class="tags">
                         <span>#Anyrun</span>
                         <span>#랜섬웨어</span>
@@ -494,17 +535,14 @@
                         <span>#행동기반탐지</span>
                     </div>
                 </div>
-                
+            <h3> </h3>
             </div>
         </section>
 
         <section id="contact">
             <h2>Contact</h2>
-            <div class="card">
-                <p>GitHub: github.com/FLY-H4N33</p>
                 <div class="contact-buttons">
-                    <a href="#" class="btn btn-outline">https://github.com/FLY-H4N33</a>
-                </div>
+                    <a href="https://github.com/FLY-H4N33" class="btn btn-outline">https://github.com/FLY-H4N33</a>
             </div>
         </section>
     </main>
